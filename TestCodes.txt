@@ -1,0 +1,57 @@
+C#
+
+//Note: This code assumes that you have installed and configured the Oracle Data Provider for .NET (ODP.NET) on your machine. You can download the latest version of ODP.NET from the Oracle website.
+
+using System.Data.SqlClient;
+
+// Connection details
+string username = "H23_FVIQLY";
+string password = "FVIQLY_A9";
+string host = "193.6.5.58";
+int port = 1521;
+string sid = "XE";
+
+// Connection string
+string connectionString = $"Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST={host})(PORT={port}))(CONNECT_DATA=(SID={sid})));User Id={username};Password={password}";
+
+// Create connection object
+SqlConnection connection = new SqlConnection(connectionString);
+
+// Open connection
+connection.Open();
+
+// Use connection
+
+// Close connection
+connection.Close();
+
+Java
+
+//Note: Make sure to have Oracle JDBC driver in your classpath before executing the code.
+
+import java.sql.*;
+
+public class SQLConnection {
+	public static void main(String[] args) {
+		try {
+			// Register the JDBC driver
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			// Connect to the database
+			String url = "jdbc:oracle:thin:@193.6.5.58:1521:XE";
+			Connection conn = DriverManager.getConnection(url, "H23_FVIQLY", "FVIQLY_A9");
+
+			// Connection successful, print message
+			System.out.println("Connected to database!");
+
+			// Clean up resources
+			conn.close();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,2 @@
+create table termekek(tkod int primary key, nev char(30) not null, kategoria nev char(30), ear int check(ear>10), felvitel_datum date)
+sqlite ujdb.db

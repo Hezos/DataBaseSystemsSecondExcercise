@@ -1,0 +1,30 @@
+PL/SQL 
+megadott témakör
+pl: mentőszlolgálat
+pl- hivások kezelése, központi elem, kivonulás eredménye  ( kocsi , orvos ) 
+
+- relációs modell
+- PL/SQL csomag 
+	- tábla feltöltés, véletlen, random, file alapon
+	- új hívás  felvitel
+	- kivonulás esemény  naplo felvitel 
+	- lekérdezések ( adott napra, tipusra hivások, kivonulások  )
+	JDBC -ben alkalmazása, hivása  a csomagnak
+	amikor jdbc ben kellene meghívni, beadni egy paraméter és megadni a paramétert 
+	
+	táblák száma: törzstábla hívások, másik a napló , kocsik, lehet az orvos 
+	 2 alaplatábla plusz még pár törzstábla 4 - 5 - 6 tábla
+	 
+	 
+	 hataridő: 29
+	 
+	 
+
+1) tanszéki 
+
+		apex és dbms együtt van neptunkod al belépni
+
+2) saját 
+		
+		
+3) Database Link

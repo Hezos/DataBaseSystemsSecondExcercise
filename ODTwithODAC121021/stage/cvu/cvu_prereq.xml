@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<HOST PLATID="912">
+<SYSTEM>
+	<MEMORY>
+		<PHYSICAL_MEMORY VALUE="128" UNIT="MB" SEVERITY="IGNORABLE"/>
+		<!--<AVAILABLE_MEMORY VALUE="20" UNIT="MB"/> -->	
+	</MEMORY>
+	<SPACE>
+		<LOC VAR="TEMP_AREA" TEMP="true" SIZE="130" UNIT="MB" SEVERITY="IGNORABLE"/>
+	</SPACE>
+</SYSTEM>
+<CERTIFIED_SYSTEMS>
+         <OPERATING_SYSTEM RELEASE="6.0">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+		     <LIST>
+		        <VALUE>32-bit</VALUE>
+		        <VALUE>64-bit</VALUE>
+		     </LIST>
+	         </ARCHITECTURE>
+         	 <NAME VALUE="WindowsServer2008"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+         <OPERATING_SYSTEM RELEASE="6.0">
+         	 <VERSION VALUE="3"/>
+       		 <ARCHITECTURE>
+		     <LIST>
+		        <VALUE>32-bit</VALUE>
+		        <VALUE>64-bit</VALUE>
+		     </LIST>
+	         </ARCHITECTURE>
+         	 <NAME VALUE="WindowsVista"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+	 <OPERATING_SYSTEM RELEASE="6.1">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+		     <LIST>
+		        <VALUE>32-bit</VALUE>
+		        <VALUE>64-bit</VALUE>
+		     </LIST>
+	         </ARCHITECTURE>
+         	 <NAME VALUE="Windows 7"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+	 <OPERATING_SYSTEM RELEASE="6.2">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+		     <LIST>
+		        <VALUE>32-bit</VALUE>
+		        <VALUE>64-bit</VALUE>
+		     </LIST>
+	         </ARCHITECTURE>
+         	 <NAME VALUE="Windows 8"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+	 <OPERATING_SYSTEM RELEASE="6.2">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+                     <LIST>
+                        <!-- Fix for bug 17015590 --> 
+                        <!-- Though Micorsoft does not support 32-bit version of Windows Server 2012, the cvu framework code is validating the Windows 8 architecture value with Windows Server 2012 architecture value because both have the same release value of 6.2 -->
+                        <!-- and hence the 32-bit value is added to list of architecture value as a workaround to prevent the architecture prerequisite failure when 32-bit client is installed on 32-bit Windows 8 OS -->
+                        <VALUE>32-bit</VALUE>
+                        <VALUE>64-bit</VALUE>
+                     </LIST>
+                 </ARCHITECTURE>
+         	 <NAME VALUE="Windows Server 2012"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+	<OPERATING_SYSTEM RELEASE="6.3">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+		     <LIST>
+		        <VALUE>32-bit</VALUE>
+		        <VALUE>64-bit</VALUE>
+		     </LIST>
+	         </ARCHITECTURE>
+         	 <NAME VALUE="Windows 8.1"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+	 <OPERATING_SYSTEM RELEASE="6.3">
+         	 <VERSION VALUE="3"/>
+         	 <ARCHITECTURE>
+                     <LIST>
+                        <!-- Fix for bug 17015590 --> 
+                        <!-- Though Micorsoft does not support 32-bit version of Windows Server 2012 R2, the cvu framework code is validating the Windows 8.1 architecture value with Windows Server 2012 R2 architecture value because both have the same release value of 6.3 -->
+                        <!-- and hence the 32-bit value is added to list of architecture value as a workaround to prevent the architecture prerequisite failure when 32-bit client is installed on 32-bit Windows 8.1 OS -->
+                        <VALUE>32-bit</VALUE>
+                        <VALUE>64-bit</VALUE>
+                     </LIST>
+                 </ARCHITECTURE>
+         	 <NAME VALUE="Windows Server 2012 R2"/>
+         	 <ENV_VAR_LIST>
+         	     <ENV_VAR NAME="PATH" MAX_LENGTH="5119" />
+         	 </ENV_VAR_LIST>
+         </OPERATING_SYSTEM>
+
+</CERTIFIED_SYSTEMS>
+<ORACLE_HOME>
+	<COMPATIBILITY_MATRIX>
+       <ALLOW>
+     	<!-- Allowing new home,DB home version from 12.1.0.2.0 to 12.1.0.2.99, Client home version from 12.1.0.0.0 to 12.1.0.2.99 and removing all disallow section ,fix for bug# 17399376  -->
+        <NEW_HOME />
+        <COMP NAME="oracle.server" ATLEAST="12.1.0.2.0" ATMOST="12.1.0.2.99"/>
+        <COMP NAME="oracle.client" ATLEAST="12.1.0.0.0" ATMOST="12.1.0.2.99"/>
+       </ALLOW>
+      </COMPATIBILITY_MATRIX>	
+</ORACLE_HOME>
+</HOST>

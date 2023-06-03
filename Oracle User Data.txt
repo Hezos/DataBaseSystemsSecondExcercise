@@ -1,0 +1,16 @@
+Port number: 1521
+Connection Alias: ToBeAdministrated
+Host name: ToBeAdministratedHost
+Service name: ToBeAdministratedService
+
+User: Oracle
+password: Kutya032
+
+message:
+Run the SQL scripts located in D:\Beadando2\product\12.1.0\client_2\ASP.NET\SQL directory after a new installation or an upgrade of Oracle Providers for ASP.NET.
+Database Connection Configuration
+
+A TNSNAMES.ORA file containing your connection alias has been created in
+D:\Beadando2\product\12.1.0\client_2\Network\Admin
+
+SQL developer
